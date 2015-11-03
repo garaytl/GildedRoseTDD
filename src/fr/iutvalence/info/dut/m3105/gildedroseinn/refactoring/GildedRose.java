@@ -23,14 +23,9 @@ public class GildedRose
 			updateItem(items.get(indexInItemList));
 	}
 
-	public static void updateItem(Item item)
+	public static void updateItem(InterfaceItem item)
 	{
-			item.updateSellIn();
-			item.updateQuality();
-			if (item.getSellIn()<0)
-				item.updateQuality();
-			if (item.getQuality()<1)
-				item.setQuality(0);
+		item.updateStat();
 	}
 
 }

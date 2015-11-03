@@ -25,15 +25,12 @@ public class GildedRose
 
 	public static void updateItem(Item item)
 	{
-		if (item.getSellIn()<0){
 			item.updateSellIn();
 			item.updateQuality();
-			item.updateQuality();
-		}
-		else{
-			item.updateSellIn();
-			item.updateQuality();
-		}
+			if (item.getSellIn()<0)
+				item.updateQuality();
+			if (item.getQuality()<1)
+				item.setQuality(0);
 	}
 
 }

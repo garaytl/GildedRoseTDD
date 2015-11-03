@@ -18,6 +18,14 @@ public class GildedRoseTest
 		assertEquals(vestSwag.getSellIn(),9);
 		
 	}
-	
+	@Test
+	public void updateItemWhenSellInIsLowerThanZeroDecreaseQualityByTwo()
+	{
+		GildedRose myShop = new GildedRose();
+		Item vestSwag = new Item("+5 Dexterity Vest", -1, 20);
+		myShop.updateItem(vestSwag);
+		assertEquals(vestSwag.getQuality(),18);
+		assertEquals(vestSwag.getSellIn(),-2);
+	}
 
 }

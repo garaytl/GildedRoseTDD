@@ -42,4 +42,14 @@ public class Item
 	{
 		this.quality = quality;
 	}
+	
+	public void updateQuality()
+	{
+		this.setQuality(this.quality-1);
+	}
+	
+	public void updateSellIn()
+	{
+		this.setSellIn(this.sellIn-1);
+	}
 }
